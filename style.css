@@ -1,0 +1,79 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
+
+body{
+  display: flex;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.colmn{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h2{
+  font-size: 28px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: 0.2s linear;
+
+  position: relative;
+}
+h2:hover{
+  border: 1px solid black;
+  box-shadow: 0 0 5px black;
+  transition: 0.2s linear;
+}
+.show__copy::after{
+  content: 'copied';
+  position: absolute;
+  top: -100%;
+  left: 15%;
+  transition: 0.3s linear;
+}
+button{
+  color: green;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+button:hover{
+  border: 1px solid green;
+  box-shadow: 0 0 5px green;
+  transition: 0.2s linear;
+}
+
+@media(max-width: 800px){
+
+h2{
+  font-size: 20px;
+}
+}
+
+@media(max-width: 600px){
+
+  body{
+    flex-direction: column;
+  }
+  .colmn{
+    flex-direction: row;
+  }
+  }
+
+  @media(max-width: 400px){
+
+    h2{
+      font-size: 18px;
+    }
+    button{
+      font-size: 20px;
+    }
+    }
